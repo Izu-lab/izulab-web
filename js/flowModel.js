@@ -35,22 +35,22 @@ const FlowModel = {
         {
             number: 1,
             title: '月灯を受け取る',
-            description: '会場で美しい月灯（提灯）を受け取り、月光のような灯りを手にします。'
+            // description: '会場で美しい月灯（提灯）を受け取り、月光のような灯りを手にします。'
         },
         {
             number: 2,
             title: '五つの無理難題に挑む',
-            description: 'かぐや姫の物語に基づいた五つの体験に挑戦します。'
+            // description: 'かぐや姫の物語に基づいた五つの体験に挑戦します。'
         },
         {
             number: 3,
             title: '月へ思いを届ける',
-            description: '体験を通じて感じた思いを月へ届けます。'
+            // description: '体験を通じて感じた思いを月へ届けます。'
         },
         {
             number: 4,
             title: '月灯を返却する',
-            description: '体験を終えた後、月灯をスタッフに返却します。'
+            // description: '体験を終えた後、月灯をスタッフに返却します。'
         }
     ],
 

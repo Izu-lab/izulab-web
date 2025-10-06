@@ -1,7 +1,3 @@
-/**
- * Challenges Controller - 五つの無理難題のコントローラー
- */
-
 const ChallengesController = {
     init() {
         if (document.readyState === 'loading') {

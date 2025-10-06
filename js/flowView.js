@@ -97,70 +97,70 @@ const FlowView = {
         animation.onfinish = () => particle.remove();
     },
 
-    // フローステップにツールチップを追加
-    addStepTooltips(steps) {
-        const flowSteps = document.querySelectorAll('.flow-step');
+//     // フローステップにツールチップを追加
+//     addStepTooltips(steps) {
+//         const flowSteps = document.querySelectorAll('.flow-step');
         
-        flowSteps.forEach((stepEl, index) => {
-            if (steps[index]) {
-                stepEl.setAttribute('title', steps[index].description);
+//         flowSteps.forEach((stepEl, index) => {
+//             if (steps[index]) {
+//                 stepEl.setAttribute('title', steps[index].description);
                 
-                // カスタムツールチップを作成
-                stepEl.addEventListener('mouseenter', (e) => {
-                    this.showTooltip(e.currentTarget, steps[index].description);
-                });
+//                 // カスタムツールチップを作成
+//                 stepEl.addEventListener('mouseenter', (e) => {
+//                     this.showTooltip(e.currentTarget, steps[index].description);
+//                 });
                 
-                stepEl.addEventListener('mouseleave', () => {
-                    this.hideTooltip();
-                });
-            }
-        });
-    },
+//                 stepEl.addEventListener('mouseleave', () => {
+//                     this.hideTooltip();
+//                 });
+//             }
+//         });
+//     },
 
-    showTooltip(element, text) {
+//     showTooltip(element, text) {
 
-         document.querySelectorAll('.custom-tooltip').forEach(oldTooltip => {
-        oldTooltip.remove();
-    });
+//          document.querySelectorAll('.custom-tooltip').forEach(oldTooltip => {
+//         oldTooltip.remove();
+//     });
     
-        const tooltip = document.createElement('div');
-        tooltip.className = 'custom-tooltip';
-        tooltip.textContent = text;
-        tooltip.style.cssText = `
-            position: fixed;
-            background: rgba(63, 70, 94, 0.95);
-            color: #E3E4E9;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            max-width: 200px;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            pointer-events: none;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-        `;
+//         const tooltip = document.createElement('div');
+//         tooltip.className = 'custom-tooltip';
+//         tooltip.textContent = text;
+//         tooltip.style.cssText = `
+//             position: fixed;
+//             background: rgba(63, 70, 94, 0.95);
+//             color: #E3E4E9;
+//             padding: 8px 12px;
+//             border-radius: 6px;
+//             font-size: 12px;
+//             max-width: 200px;
+//             z-index: 1000;
+//             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+//             pointer-events: none;
+//             opacity: 0;
+//             transform: translateY(10px);
+//             transition: all 0.3s ease;
+//         `;
         
-        document.body.appendChild(tooltip);
+//         document.body.appendChild(tooltip);
         
-        const rect = element.getBoundingClientRect();
-        tooltip.style.left = `${rect.right + 10}px`;
-        tooltip.style.top = `${rect.top + rect.height / 2 - tooltip.offsetHeight / 2}px`;
+//         const rect = element.getBoundingClientRect();
+//         tooltip.style.left = `${rect.right + 10}px`;
+//         tooltip.style.top = `${rect.top + rect.height / 2 - tooltip.offsetHeight / 2}px`;
         
-        setTimeout(() => {
-            tooltip.style.opacity = '1';
-            tooltip.style.transform = 'translateY(0)';
-        }, 10);
-    },
+//         setTimeout(() => {
+//             tooltip.style.opacity = '1';
+//             tooltip.style.transform = 'translateY(0)';
+//         }, 10);
+//     },
 
-    hideTooltip() {
-        const tooltip = document.querySelector('.custom-tooltip');
-        if (tooltip) {
-            tooltip.style.opacity = '0';
-            setTimeout(() => tooltip.remove(), 300);
-        }
-    }
-};
-
+//     hideTooltip() {
+//         const tooltip = document.querySelector('.custom-tooltip');
+//         if (tooltip) {
+//             tooltip.style.opacity = '0';
+//             setTimeout(() => tooltip.remove(), 300);
+//         }
+//     }
+// };
+}
 window.FlowView = FlowView;
