@@ -116,7 +116,7 @@ const ChallengesView = {
             top: -10px;
             left: -10px;
             right: -10px;
-            bottom: -10px;
+            bottom: 0px;
             background: radial-gradient(circle, rgba(255, 215, 0, 0.2), transparent 70%);
             border-radius: 12px;
             pointer-events: none;

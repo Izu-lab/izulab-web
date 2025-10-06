@@ -40,9 +40,9 @@ const ChallengesController = {
             const challengeData = ChallengesModel.getChallengeById(challengeId);
             
             // クリックで詳細モーダル表示
-            challenge.addEventListener('click', () => {
-                this.showChallengeDetails(challengeData);
-            });
+            // challenge.addEventListener('click', () => {
+            //     this.showChallengeDetails(challengeData);
+            // });
             
             // ダブルクリックで特別なエフェクト
             challenge.addEventListener('dblclick', (e) => {
@@ -79,7 +79,7 @@ const ChallengesController = {
             setTimeout(() => {
                 const particle = document.createElement('div');
                 const angle = (360 / 16) * i;
-                const distance = 80 + Math.random() * 40;
+                const distance = 30 + Math.random() * 40;
                 
                 particle.textContent = ['✨', '⭐', '💫', '🌟'][Math.floor(Math.random() * 4)];
                 particle.style.cssText = `
@@ -107,8 +107,8 @@ const ChallengesController = {
                     },
                     {
                         transform: `translate(
-                            ${Math.cos(angle * Math.PI / 180) * distance}px,
-                            ${Math.sin(angle * Math.PI / 180) * distance}px
+                            ${Math.cos(angle * Math.PI / 180) * distance }px,
+                            ${Math.sin(angle * Math.PI / 180) * distance }px
                         ) scale(0) rotate(360deg)`,
                         opacity: 0
                     }
