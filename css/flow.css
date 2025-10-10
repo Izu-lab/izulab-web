@@ -388,6 +388,11 @@ body {
     transition: transform 0.5s ease;
 }
 
+/* IMG_1155.jpg の位置調整 - 上の部分を表示 */
+.step-image img[src="picture/IMG_1155.jpg"] {
+    object-position: center 20%;
+}
+
 .flow-step:hover .step-image img {
     transform: scale(1.1);
 }
